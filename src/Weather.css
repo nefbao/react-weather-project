@@ -1,0 +1,40 @@
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.searchInput {
+    box-shadow: 0px 9px 9px rgb(213, 213, 213);
+    width: 250px !important;
+  }
+  .searchButton {
+    width: 150px !important;
+    margin-left: 10px;
+    display: inline;
+    box-shadow: 0px 9px 9px rgb(213, 213, 213);
+    background: blueviolet;
+    color: white;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+  }
+  .searchButton:hover {
+    color: blueviolet;
+    background: white;
+    border: 1px solid blueviolet;
+  }
+  
+h1{
+    color: blueviolet;
+}
+.forecast{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+@media (max-width:800px){
+    .forecast{
+        flex-wrap: wrap;
+        gap:20px 5px
+    }   
+}

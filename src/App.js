@@ -1,12 +1,14 @@
 import './App.css';
+import Weather from './Weather';
+import "bootstrap/dist/css/bootstrap.css";
 
 export default function App() {
   return (
     <div className="App">
-      <div className='container'>
-      <h1>Weather App</h1>
-      <footer><a href='https://github.com/nefbao/react-weather-project'>open-source code</a> by Nahid Norouzi</footer>
+      <div className='container wrap'>
+      <Weather />
       </div>
+      <footer className='text-center mb-5'><a className='sourceCode' href='https://github.com/nefbao/react-weather-project'>open-source code</a> by Nahid Norouzi</footer>
     </div>
   );
 }

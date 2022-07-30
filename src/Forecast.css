@@ -1,0 +1,13 @@
+.Forecast{
+    border: 1px solid rgb(220, 182, 255);
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 9px 9px rgb(213, 213, 213);
+}
+.forecastHighestDegree{
+    color: rgb(255, 92, 92);
+}
+.forecastLowestDegree{
+    color: rgb(94, 94, 255);
+}
