@@ -1,4 +1,23 @@
+.first-color { 
+	background: #57385c; 
+}
+	
+.second-color { 
+	background: #a75265; 
+}
+
+.third-color { 
+	background: #ec7263; 
+}
+
+.fourth-color { 
+	background: #febe7e; 
+}
+
+
+
 .wrap{
+  background: #57385c;
     border: 1px solid blueviolet;
     max-width: 950px !important;
     padding: 20px 0;
@@ -7,6 +26,6 @@
     margin: 20px auto;
   }
   .sourceCode {
-    color: blueviolet;
+    color: #57385c;
     text-decoration: none;
   }
