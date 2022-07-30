@@ -7,11 +7,11 @@ return(
     <div className="Current">
         <div className="icon"><img src="http://openweathermap.org/img/wn/02d@2x.png" alt="weather icon"></img></div>
         <div className="currentData">
-            <div className="degree">20 
-            <span className="unit"> ℃ | ℉</span>
+            <div className="degree">
+                20 <span className="unit"> ℃ | ℉</span>
             </div>
-            <div className="currentDay"></div>
-            <div className="currentTime"></div>
+            <div className="currentDay">Saturday</div>
+            <div className="currentTime">10:02</div>
         </div>
         <div className="CurrentDetails">
             <div className="currentDescription">Cloudy</div>
