@@ -1,10 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Current.css"
+import Icon from "./Icon"
 
 export default function Current({ data }){
-    // Set Icon --------------------------------------------
-     let src = `http://openweathermap.org/img/wn/${data.current.weather[0].icon}@2x.png`;
     // Set Current Day -------------------------------------
     let now = new Date();
     let days = [
@@ -31,7 +30,7 @@ export default function Current({ data }){
     }
     return(
         <div className="Current">
-            <div className="icon"><img src={src} alt="weather icon"></img></div>
+            <div className="icon"><Icon icon={data.current.weather[0].icon} size={100} /></div>
             <div className="currentData">
                 <div className="degree">
                     {Math.round(data.current.temp)} <span className="unit"> ℃ | ℉</span>
