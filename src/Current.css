@@ -26,6 +26,9 @@
 .currentTime{
     font-size: 18px;
 }
+.currentDescription:first-letter {
+    text-transform: uppercase;
+}
 @media (max-width:800px){
     .degree{
         font-size: 25px;
