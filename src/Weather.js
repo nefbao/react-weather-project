@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import "./Weather.css"
 import Current from "./Current";
 import "bootstrap/dist/css/bootstrap.css";
@@ -6,14 +6,10 @@ import Forecast from "./Forecast";
 import axios from "axios";
 
 export default function Weather(){
-    useEffect(() => {
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=mashhad&appid=6d9a58b41020207ced9d1a03a3fe8817&units=metric`;
-        axios.get(url).then(handleResponse);
-      }, []);
     const [weatherData, setWeatherData] = useState({});
     const [ready,setReady]=useState(false);
     const [displayedCity, setdisplayedCity] = useState("");
-    let city="";
+    let city="mashhad";
 
     function displayForecast(response) {
         setWeatherData(response.data);
