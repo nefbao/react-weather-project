@@ -10,11 +10,12 @@ export default function Weather(){
     const [ready,setReady]=useState(false);
     const [displayedCity, setdisplayedCity] = useState("");
     let city="";
+    let ufvar="";
     
     useEffect(() => {
         let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=mashhad&appid=165b70d9de0283218fc2471a0ff56e01&units=metric`;
         axios.get(apiUrl).then(handleResponse)
-      }, []);
+      }, [ufvar]);
 
     function displayForecast(response) {
         setWeatherData(response.data);
@@ -57,6 +58,9 @@ export default function Weather(){
             </div>
         );
     }else{
+        if(ready){
+            ufvar="hi";
+        }
         search();
         return <div className="loading text-light">"Loading..."</div>;
     }
