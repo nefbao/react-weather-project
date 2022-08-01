@@ -11,9 +11,10 @@ export default function Weather(){
     const [displayedCity, setdisplayedCity] = useState("");
     let city="mashhad";
 
+    
+
     function displayForecast(response) {
         setWeatherData(response.data);
-        console.log(weatherData);
         setReady(true);
     }
     function handleResponse(response){
