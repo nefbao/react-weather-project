@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import "./Weather.css"
 import Current from "./Current";
 import "bootstrap/dist/css/bootstrap.css";
@@ -10,12 +10,7 @@ export default function Weather(){
     const [ready,setReady]=useState(false);
     const [displayedCity, setdisplayedCity] = useState("");
     let city="";
-    let ufvar="";
-    
-    useEffect(() => {
-        let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=mashhad&appid=165b70d9de0283218fc2471a0ff56e01&units=metric`;
-        axios.get(apiUrl).then(handleResponse)
-      }, [ufvar]);
+    let renderCounter = 0;
 
     function displayForecast(response) {
         setWeatherData(response.data);
@@ -35,6 +30,11 @@ export default function Weather(){
         city=event.target.value;
     }
     function search(){
+        console.log(renderCounter);
+        if (renderCounter===1){
+            let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=mashhad&appid=165b70d9de0283218fc2471a0ff56e01&units=metric`;
+            axios.get(apiUrl).then(handleResponse)
+        }
         let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=165b70d9de0283218fc2471a0ff56e01&units=metric`;
         axios.get(apiUrl).then(handleResponse)
     }
@@ -58,9 +58,7 @@ export default function Weather(){
             </div>
         );
     }else{
-        if(ready){
-            ufvar="hi";
-        }
+        renderCounter = renderCounter+1;
         search();
         return <div className="loading text-light">"Loading..."</div>;
     }
