@@ -17,6 +17,7 @@ export default function Weather(){
 
     function displayForecast(response) {
         setWeatherData(response.data);
+        console.log(weatherData);
         setReady(true);
     }
     function handleResponse(response){
@@ -57,6 +58,6 @@ export default function Weather(){
         );
     }else{
         search();
-        return "Loading...";
+        return <div className="loading text-light">"Loading..."</div>;
     }
 }

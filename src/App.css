@@ -29,3 +29,9 @@
     color: #57385c;
     text-decoration: none;
   }
+
+@media (max-width:800px){
+  .wrap{
+    margin: 0 auto !important;
+  }
+}

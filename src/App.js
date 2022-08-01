@@ -8,7 +8,7 @@ export default function App() {
       <div className='container wrap'>
       <Weather />
       </div>
-      <footer className='text-center mb-5'><a className='sourceCode' href='https://github.com/nefbao/react-weather-project'>open-source code</a> by Nahid Norouzi</footer>
+      <footer className='text-center my-2'><a className='sourceCode' href='https://github.com/nefbao/react-weather-project'>open-source code</a> by Nahid Norouzi</footer>
     </div>
   );
 }

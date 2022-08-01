@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./Current.css"
 import Icon from "./Icon"
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function Current({ data }){
     // Set Current Day -------------------------------------
@@ -33,7 +34,7 @@ export default function Current({ data }){
             <div className="icon"><Icon icon={data.current.weather[0].icon} size={100} /></div>
             <div className="currentData">
                 <div className="degree">
-                    {Math.round(data.current.temp)} <span className="unit"> ℃ | ℉</span>
+                    <WeatherTemperature celsius={Math.round(data.current.temp)} />
                 </div>
                 <div className="currentDay">{currentDay}</div>
                 <div className="currentTime">{currentTime}</div>
